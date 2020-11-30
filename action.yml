@@ -1,0 +1,21 @@
+name: 'Depcheck action'
+inputs:
+    project:
+        required: true
+    path:
+        required: true  
+    format:
+        required: true
+runs:
+    using: 'docker'
+    image: 'docker://javidr/depcheckaction'
+    args:
+
+        - '--project'
+        - '${{ inputs.project }}'
+        - '--scan'
+        - '${{ inputs.path }}'
+        - '--format' 
+        - '${{ inputs.format }}'
+        - '--out'
+        -  '/reports'
