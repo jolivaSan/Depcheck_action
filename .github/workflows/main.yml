@@ -3,6 +3,9 @@ on: [push]
 jobs:
   depchecktest:
     runs-on: ubuntu-latest
+    container:
+      image: javidr/depcheckaction
+      options: -v /reports ${{github.workspace}}/reports
     name: depecheck_test
     steps:
       - name: Checkout
