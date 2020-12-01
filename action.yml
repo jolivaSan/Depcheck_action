@@ -1,21 +1,26 @@
 name: 'Depcheck action'
+description: Creating a github action
+
 inputs:
     project:
+        description: project
         required: true
     path:
+        description: path
         required: true  
     format:
+        description: format
         required: true
-runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
 
-        - '--project'
-        - '${{ inputs.project }}'
-        - '--scan'
-        - '${{ inputs.path }}'
-        - '--format' 
-        - '${{ inputs.format }}'
-        - '--out'
-        -  './reports'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - "--project"
+    - "${{ inputs.project }}"
+    - "--scan"
+    - "${{ inputs.path }}"
+    - "--format"
+    - "${{ inputs.format }}"
+    - "--out"
+    - "reports/"
