@@ -22,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@master
         with:
            name: Depcheck report
-           path: ${{github.workspace}}/src/reports/*.html
+           path: ${{github.workspace}}/src
