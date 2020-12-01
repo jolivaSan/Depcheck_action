@@ -16,9 +16,9 @@ jobs:
           project: 'test'
           path: '.'
           format: 'HTML'
-     - name: checkdir1
+      - name: checkdir1
         run: ls -la
-     - name: checkdir
+      - name: checkdir
         run: ls -la src        
       - name: Upload Test results
         uses: actions/upload-artifact@master
