@@ -18,10 +18,5 @@ jobs:
           format: 'HTML'
       - name: checkdir1
         run: ls -la
-      - name: checkdir
-        run: ls -la /github/workspace        
-      - name: Upload Test results
-        uses: actions/upload-artifact@master
-        with:
-           name: Depcheck report
-           path: ${{github.workspace}}/src
+      - name: check file
+        run: cat bar.txt
