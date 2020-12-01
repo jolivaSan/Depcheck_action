@@ -1,4 +1,6 @@
 #!/bin/sh
 
+pwd
 ls
-/usr/share/dependency-check/bin/dependency-check.sh $@
+echo foo > bar.txt
+ls
